@@ -56,7 +56,7 @@ class MainActivity: Activity() {
     }
     private fun init(section:String) {
         val outer=column().apply{setBackgroundColor(PAGE)}
-        val scroll=ScrollView(this).apply{fillViewport=true; clipToPadding=false}
+        val scroll=ScrollView(this).apply{isfillViewport=true; clipToPadding=false}
         root=column().apply{setPadding(dp(18),dp(24),dp(18),dp(28))}
         scroll.addView(root); outer.addView(scroll,LinearLayout.LayoutParams(-1,0,1f)); setContentView(outer)
         root.addView(label("DAYFLOW  /  离线日程",12f,true,BLUE)); addGap(root,6)
